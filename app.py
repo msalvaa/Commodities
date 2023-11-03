@@ -70,9 +70,8 @@ def display_value(selected_commodity, frecuencia, start_date, end_date):
                          (commodities_melt["Fecha"].dt.date>=(datetime.datetime.strptime(start_date, '%Y-%m-%d').date() )) &
                         (commodities_melt["Fecha"].dt.date<=(datetime.datetime.strptime(end_date, '%Y-%m-%d').date() ))]
     if frecuencia=="Mensual":
-        fig=px.line(df2.groupby(['Mes', 'Commodity']).mean().reset_index(),x="Mes",markers=True,y="Precio ($)", color="Commodity")
-    else: fig= px.line(df2,color="Commodity",x="Fecha",markers=True,y="Precio ($)",
-                width=1000,height=500)
+        fig=px.line(df2.groupby(['Mes', 'Commodity']).mean().reset_index(),x="Mes",markers=True,y="Precio ($)", color="Commodity",height=800)
+    else: fig= px.line(df2,color="Commodity",x="Fecha",markers=True,y="Precio ($)",height=800)
     
    
 
