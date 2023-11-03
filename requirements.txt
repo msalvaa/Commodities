@@ -1,0 +1,7 @@
+dash
+plotly.express
+pandas
+dash_bootstrap_components
+datetime
+dash_core_components
+gunicorn
