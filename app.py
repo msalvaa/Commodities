@@ -14,7 +14,7 @@ app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 server = app.server
 
-app.title="Dashboard"
+app.title="Precios de commodities"
 
 commodities=pd.read_excel("commodities.xlsx")
 commodities_melt=pd.melt(commodities, id_vars=["Fecha","Mes"], var_name='Commodity', value_name='Precio ($)')
